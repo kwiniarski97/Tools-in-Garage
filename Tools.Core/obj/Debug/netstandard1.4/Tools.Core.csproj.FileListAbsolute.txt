@@ -1,0 +1,7 @@
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Core\bin\Debug\netstandard1.4\Tools.Core.deps.json
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Core\bin\Debug\netstandard1.4\Tools.Core.dll
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Core\bin\Debug\netstandard1.4\Tools.Core.pdb
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Core\obj\Debug\netstandard1.4\Tools.Core.csprojResolveAssemblyReference.cache
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Core\obj\Debug\netstandard1.4\Tools.Core.AssemblyInfo.cs
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Core\obj\Debug\netstandard1.4\Tools.Core.dll
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Core\obj\Debug\netstandard1.4\Tools.Core.pdb

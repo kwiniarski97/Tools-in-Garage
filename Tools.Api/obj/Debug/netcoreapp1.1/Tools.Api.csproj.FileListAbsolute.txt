@@ -1,0 +1,13 @@
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\bin\Debug\netcoreapp1.1\Tools.Api.deps.json
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\bin\Debug\netcoreapp1.1\Tools.Api.runtimeconfig.json
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\bin\Debug\netcoreapp1.1\Tools.Api.runtimeconfig.dev.json
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\bin\Debug\netcoreapp1.1\Tools.Api.dll
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\bin\Debug\netcoreapp1.1\Tools.Api.pdb
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\obj\Debug\netcoreapp1.1\Tools.Api.AssemblyInfo.cs
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\obj\Debug\netcoreapp1.1\Tools.Api.dll
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\obj\Debug\netcoreapp1.1\Tools.Api.pdb
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\bin\Debug\netcoreapp1.1\Tools.Infrastructure.dll
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\bin\Debug\netcoreapp1.1\Tools.Infrastructure.pdb
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\obj\Debug\netcoreapp1.1\Tools.Api.csprojResolveAssemblyReference.cache
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\bin\Debug\netcoreapp1.1\Tools.Core.dll
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\bin\Debug\netcoreapp1.1\Tools.Core.pdb

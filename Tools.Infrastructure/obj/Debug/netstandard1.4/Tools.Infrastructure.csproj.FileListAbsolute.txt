@@ -1,0 +1,10 @@
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\bin\Debug\netstandard1.4\Tools.Infrastructure.deps.json
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\bin\Debug\netstandard1.4\Tools.Infrastructure.dll
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\bin\Debug\netstandard1.4\Tools.Infrastructure.pdb
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\obj\Debug\netstandard1.4\Tools.Infrastructure.AssemblyInfo.cs
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\obj\Debug\netstandard1.4\Tools.Infrastructure.dll
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\obj\Debug\netstandard1.4\Tools.Infrastructure.pdb
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\bin\Debug\netstandard1.4\Tools.Core.dll
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\bin\Debug\netstandard1.4\Tools.Core.pdb
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\bin\Debug\netstandard1.4\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\bin\Debug\netstandard1.4\Microsoft.Extensions.Configuration.Abstractions.xml
