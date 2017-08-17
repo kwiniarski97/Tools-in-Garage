@@ -35,20 +35,13 @@ namespace Tools.Infrastructure.Services.Implementations
         /// Select all tools from database and map them to Dto's
         /// </summary>
         /// <returns>Returns a Ienumerable object with all tools as ToolDTO's objects</returns>
-        public async Task<IEnumerable<ToolDto>> GetAllAsync()
+        public async Task<IEnumerable<ToolDetailsDto>> GetAllAsync()
         {
             var tools = await _toolRepository.GetAllAsync();
-            return _mapper.Map<IEnumerable<ToolDto>>(tools);
+            return _mapper.Map<IEnumerable<ToolDetailsDto>>(tools);
         }
 
-        /// <summary>
-        /// Creates a new tool in database
-        /// </summary>
-        /// <param name="id">id</param>
-        /// <param name="model">model</param>
-        /// <param name="brand">brand</param>
-        /// <param name="type">type</param>
-        /// <param name="box">box number</param>
+        
         public async Task AddAsync(Guid id, string model, string brand, string type, uint box)
         {
             var tool = await _toolRepository.GetAsync(id);
@@ -71,16 +64,5 @@ namespace Tools.Infrastructure.Services.Implementations
             await _toolRepository.UpdateAsync(tool);
         }
 
-        public async Task<IEnumerable<ToolDto>> GetAllOfTypeAsync(string type)
-        {
-            var tools = await _toolRepository.GetAllOfTypeAsync(type);
-            return _mapper.Map<IEnumerable<ToolDto>>(tools);
-        }
-
-        public async Task<ToolDetailsDto> GetDetailsAsync(Guid id)
-        {
-            var tool = await _toolRepository.GetAsync(id);
-            return _mapper.Map<ToolDetailsDto>(tool);
-        }
     }
 }

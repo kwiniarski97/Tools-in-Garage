@@ -14,6 +14,7 @@ namespace Tools.Infrastructure.Mappers
             new MapperConfiguration(cfg =>
                 {
                     //add here another mappers
+                    cfg.CreateMap<Tool, ToolDetailsDto>();
                     cfg.CreateMap<Tool, ToolDto>();
                 }
             ).CreateMapper();

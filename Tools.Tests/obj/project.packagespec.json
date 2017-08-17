@@ -32,9 +32,17 @@
           "target": "Package",
           "version": "1.1.2"
         },
+        "FluentAssertions": {
+          "target": "Package",
+          "version": "4.19.3"
+        },
         "Microsoft.NET.Test.Sdk": {
           "target": "Package",
           "version": "15.0.0"
+        },
+        "Moq": {
+          "target": "Package",
+          "version": "4.7.99"
         },
         "xunit": {
           "target": "Package",

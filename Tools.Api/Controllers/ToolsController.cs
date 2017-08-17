@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Tools.Infrastructure.Commands;
 using Tools.Infrastructure.Commands.Tool;
@@ -18,6 +17,12 @@ namespace Tools.Api.Controllers
             _toolService = toolService;
         }
 
+        /// <summary>
+        /// Gets a IEnumerable of all tools from tool service.
+        ///  If there is't any tools returns no content.
+        /// PATH: ie. localhost/tools
+        /// </summary>
+        /// <returns>List of tools as JSON</returns>
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -31,8 +36,9 @@ namespace Tools.Api.Controllers
 
         /// <summary>
         /// gets a single tool of model and print it to json
+        /// PATH: ie. localhost/tools/h43-asd1
         /// </summary>
-        /// <param name="model"></param>
+        /// <param name="model">model to get</param>
         /// <returns></returns>
         [HttpGet("{model}")]
         public async Task<IActionResult> Get(string model)
@@ -45,26 +51,41 @@ namespace Tools.Api.Controllers
             return Json(tool);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> Get(Guid id)
-        {
-            var tool = await _toolService.GetDetailsAsync(id);
-            if (tool == null)
-            {
-                NoContent();
-            }
-            return Json(tool);
-        }
-
+        /// <summary>
+        /// Adds a tool using a Add tool command
+        /// PATH: ie. localhost/tools 
+        /// In POST you should give JSON 
+        /// {
+        /// 	"model" : "QuadBox",
+        ///	    "brand" : "SAE",
+        ///	    "type" : "wrench",
+        ///	    "box" : 1
+        /// }
+        /// </summary>
         [HttpPost("")]
-        public async Task<IActionResult> Post([FromBody] AddTool command)
+        public async Task Post([FromBody] AddTool command)
         {
             await DispatchAsync(command);
-            return Created($"tools/{command.Id}", null);
         }
 
-        [HttpPost("delete/{id}")]
+        /// <summary>
+        /// Delete a tool
+        /// PATH: ie. localhost/tools/delete
+        /// In POST you should give JSON 
+        /// {
+        /// 	"id" : "67dcd4c7-3e47-4594-b892-b9a8b318228d"
+        /// }
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        [HttpPost("delete")]
         public async Task Post([FromBody] DeleteTool command)
+        {
+            await DispatchAsync(command);
+        }
+
+        [HttpPut("update")]
+        public async Task Put([FromBody] UpdateTool command)
         {
             await DispatchAsync(command);
         }

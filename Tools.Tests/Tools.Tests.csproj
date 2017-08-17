@@ -3,7 +3,9 @@
     <TargetFramework>netcoreapp1.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="4.19.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+    <PackageReference Include="Moq" Version="4.7.99" />
     <PackageReference Include="xunit" Version="2.2.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
   </ItemGroup>
@@ -11,5 +13,8 @@
     <ProjectReference Include="..\Tools.Api\Tools.Api.csproj" />
     <ProjectReference Include="..\Tools.Core\Tools.Core.csproj" />
     <ProjectReference Include="..\Tools.Infrastructure\Tools.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LocalRepos" />
   </ItemGroup>
 </Project>

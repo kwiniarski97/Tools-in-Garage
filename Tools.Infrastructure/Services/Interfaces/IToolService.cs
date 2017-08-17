@@ -10,14 +10,18 @@ namespace Tools.Infrastructure.Services.Interfaces
     {
         Task<ToolDto> GetAsync(string model);
 
-        Task<IEnumerable<ToolDto>> GetAllAsync();
+        Task<IEnumerable<ToolDetailsDto>> GetAllAsync();
 
-        Task<IEnumerable<ToolDto>> GetAllOfTypeAsync(string type);
-
-        Task<ToolDetailsDto> GetDetailsAsync(Guid id);
-
+        /// <summary>
+        /// Creates a new tool in database
+        /// </summary>
+        /// <param name="id">id</param>
+        /// <param name="model">model</param>
+        /// <param name="brand">brand</param>
+        /// <param name="type">type</param>
+        /// <param name="box">box number</param>
         Task AddAsync(Guid id, string model, string brand, string type, uint box);
-        
+
         Task DeleteAsync(Guid id);
 
         Task UpdateAsync(Tool tool);

@@ -13,8 +13,6 @@ namespace Tools.Core.Repositories
 
         Task<IEnumerable<Tool>> GetAllAsync();
 
-        Task<IEnumerable<Tool>> GetAllOfTypeAsync(string type);
-
         Task AddAsync(Tool tool);
 
         Task DeleteAsync(Guid id);

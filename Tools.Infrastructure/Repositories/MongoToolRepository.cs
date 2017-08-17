@@ -8,7 +8,6 @@ using Tools.Core.Repositories;
 
 namespace Tools.Infrastructure.Repositories
 {
-    
     public class MongoToolRepository : IToolRepository
     {
         private readonly IMongoDatabase _database;
@@ -20,7 +19,7 @@ namespace Tools.Infrastructure.Repositories
 
         public async Task<Tool> GetAsync(string model) =>
             await Tools.AsQueryable().FirstOrDefaultAsync(tool => tool.Model == model);
-                 
+
 
         public async Task<Tool> GetAsync(Guid id) =>
             await Tools.AsQueryable().FirstOrDefaultAsync(tool => tool.Id == id);
@@ -28,21 +27,26 @@ namespace Tools.Infrastructure.Repositories
         public async Task<IEnumerable<Tool>> GetAllAsync() =>
             await Tools.AsQueryable().ToListAsync();
 
-        public async Task<IEnumerable<Tool>> GetAllOfTypeAsync(string type) =>
-        //todo tutaj trzeba to jakos zaimplementowac
-//            await from tool in Tools.AsQueryable() where tool.Type == type select tool;
-            await Tools.AsQueryable().ToListAsync();
-
         public async Task AddAsync(Tool tool) =>
             await Tools.InsertOneAsync(tool);
 
+        public async Task DeleteAsync(Guid id)
+        {
+            var tool = await GetAsync(id);
+            //had to do it this way cause short on time
+            await Tools.DeleteOneAsync( x => x.Box == tool.Box && x.Brand == tool.Brand 
+                                                && x.Model == tool.Model);
+        }
 
-        public async Task DeleteAsync(Guid id) =>
-            await Tools.DeleteOneAsync(tool => tool.Id == id);
+        public async Task UpdateAsync(Tool tool)
+        {
+            var toolOriginal = await GetAsync(tool.Id);
+            
+            await Tools.ReplaceOneAsync(x => x.Box == toolOriginal.Box && x.Brand == toolOriginal.Brand 
+                                             && x.Model == toolOriginal.Model, tool);
+        }
+            
 
-        public async Task UpdateAsync(Tool tool) =>
-            await Tools.ReplaceOneAsync(x => x.Id == tool.Id, tool);
-        
 
         private IMongoCollection<Tool> Tools => _database.GetCollection<Tool>("Tools");
     }

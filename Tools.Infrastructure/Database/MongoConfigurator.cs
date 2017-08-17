@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Conventions;
 
@@ -37,8 +36,10 @@ namespace Tools.Infrastructure.Database
                 // use camel case
                 new CamelCaseElementNameConvention(),
                 //enums holds as string
-                new EnumRepresentationConvention(BsonType.String)
-            };
+                new EnumRepresentationConvention(BsonType.String),
+                
+                
+                };
         }
     }
 }

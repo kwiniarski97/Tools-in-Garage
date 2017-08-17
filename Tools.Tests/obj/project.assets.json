@@ -58,6 +58,42 @@
           "lib/netstandard1.3/AutoMapper.dll": {}
         }
       },
+      "Castle.Core/4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Diagnostics.TraceSource": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Castle.Core.dll": {}
+        }
+      },
+      "FluentAssertions/4.19.3": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.Reflection.TypeExtensions": "4.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/FluentAssertions.Core.dll": {},
+          "lib/netstandard1.3/FluentAssertions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/FluentAssertions.Core.dll": {},
+          "lib/netstandard1.3/FluentAssertions.dll": {}
+        }
+      },
       "Libuv/1.9.1": {
         "type": "package",
         "dependencies": {
@@ -1792,6 +1828,21 @@
           "lib/netstandard1.5/MongoDB.Driver.Core.dll": {}
         }
       },
+      "Moq/4.7.99": {
+        "type": "package",
+        "dependencies": {
+          "Castle.Core": "4.1.1",
+          "NETStandard.Library": "1.6.1",
+          "System.Linq.Queryable": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Moq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Moq.dll": {}
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -2410,18 +2461,18 @@
           "ref/netstandard1.0/System.Diagnostics.Tools.dll": {}
         }
       },
-      "System.Diagnostics.TraceSource/4.0.0": {
+      "System.Diagnostics.TraceSource/4.3.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.0.1",
-          "System.Collections": "4.0.11",
-          "System.Diagnostics.Debug": "4.0.11",
-          "System.Globalization": "4.0.11",
-          "System.Resources.ResourceManager": "4.0.1",
-          "System.Runtime": "4.1.0",
-          "System.Runtime.Extensions": "4.1.0",
-          "System.Threading": "4.0.11",
-          "runtime.native.System": "4.0.0"
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "runtime.native.System": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.3/System.Diagnostics.TraceSource.dll": {}
@@ -3106,7 +3157,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.1/_._": {}
+          "ref/netstandard1.1/System.Reflection.Emit.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Reflection.Emit.dll": {}
@@ -4248,6 +4299,119 @@
         "lib/netstandard1.1/AutoMapper.xml",
         "lib/netstandard1.3/AutoMapper.dll",
         "lib/netstandard1.3/AutoMapper.xml"
+      ]
+    },
+    "Castle.Core/4.1.1": {
+      "sha512": "O+88tWlRvtYLTn4dgAENyOgaLcExeox73ledI92d72z4U9IGSiiO8n/gnTnWgEMpBuXIdcyzrXHdGtn0c5Dz/A==",
+      "type": "package",
+      "path": "castle.core/4.1.1",
+      "files": [
+        "ASL - Apache Software Foundation License.txt",
+        "CHANGELOG.md",
+        "LICENSE",
+        "castle.core.4.1.1.nupkg.sha512",
+        "castle.core.nuspec",
+        "lib/net35/Castle.Core.dll",
+        "lib/net40/Castle.Core.dll",
+        "lib/net45/Castle.Core.dll",
+        "lib/netstandard1.3/Castle.Core.dll",
+        "readme.txt"
+      ]
+    },
+    "FluentAssertions/4.19.3": {
+      "sha512": "JUHxaE7lidu1Y4k8XmVyInzeyKT0oj5PzSKOb+fTruP+/IzqtWoDIXvA9J4auiJyzn0ZcNjI8NqAiYQTwKJpZA==",
+      "type": "package",
+      "path": "fluentassertions/4.19.3",
+      "files": [
+        "fluentassertions.4.19.3.nupkg.sha512",
+        "fluentassertions.nuspec",
+        "lib/net40/FluentAssertions.Core.dll",
+        "lib/net40/FluentAssertions.Core.pdb",
+        "lib/net40/FluentAssertions.Core.xml",
+        "lib/net40/FluentAssertions.dll",
+        "lib/net40/FluentAssertions.pdb",
+        "lib/net40/FluentAssertions.xml",
+        "lib/net45/FluentAssertions.Core.dll",
+        "lib/net45/FluentAssertions.Core.pdb",
+        "lib/net45/FluentAssertions.Core.xml",
+        "lib/net45/FluentAssertions.dll",
+        "lib/net45/FluentAssertions.pdb",
+        "lib/net45/FluentAssertions.xml",
+        "lib/netstandard1.3/FluentAssertions.Core.XML",
+        "lib/netstandard1.3/FluentAssertions.Core.dll",
+        "lib/netstandard1.3/FluentAssertions.Core.pdb",
+        "lib/netstandard1.3/FluentAssertions.dll",
+        "lib/netstandard1.3/FluentAssertions.pdb",
+        "lib/netstandard1.3/FluentAssertions.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/FluentAssertions.Core.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/FluentAssertions.Core.pdb",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/FluentAssertions.Core.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/FluentAssertions.XML",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/FluentAssertions.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/FluentAssertions.pdb",
+        "lib/portable-win81+wpa81/FluentAssertions.Core.dll",
+        "lib/portable-win81+wpa81/FluentAssertions.Core.pdb",
+        "lib/portable-win81+wpa81/FluentAssertions.Core.xml",
+        "lib/portable-win81+wpa81/FluentAssertions.dll",
+        "lib/portable-win81+wpa81/FluentAssertions.pdb",
+        "lib/portable-win81+wpa81/FluentAssertions.pri",
+        "lib/portable-win81+wpa81/FluentAssertions.xml",
+        "lib/sl5/FluentAssertions.Core.dll",
+        "lib/sl5/FluentAssertions.Core.pdb",
+        "lib/sl5/FluentAssertions.Core.xml",
+        "lib/sl5/FluentAssertions.dll",
+        "lib/sl5/FluentAssertions.pdb",
+        "lib/sl5/FluentAssertions.xml",
+        "lib/sl5/Microsoft.CSharp.dll",
+        "lib/sl5/Microsoft.CSharp.xml",
+        "lib/sl5/Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.dll",
+        "lib/sl5/Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.xml",
+        "lib/sl5/System.Xml.Linq.dll",
+        "lib/sl5/System.Xml.Linq.xml",
+        "lib/sl5/de/Microsoft.CSharp.resources.dll",
+        "lib/sl5/de/System.Xml.Linq.resources.dll",
+        "lib/sl5/es/Microsoft.CSharp.resources.dll",
+        "lib/sl5/es/System.Xml.Linq.resources.dll",
+        "lib/sl5/fr/Microsoft.CSharp.resources.dll",
+        "lib/sl5/fr/System.Xml.Linq.resources.dll",
+        "lib/sl5/it/Microsoft.CSharp.resources.dll",
+        "lib/sl5/it/System.Xml.Linq.resources.dll",
+        "lib/sl5/ja/Microsoft.CSharp.resources.dll",
+        "lib/sl5/ja/System.Xml.Linq.resources.dll",
+        "lib/sl5/ko/Microsoft.CSharp.resources.dll",
+        "lib/sl5/ko/System.Xml.Linq.resources.dll",
+        "lib/sl5/ru/Microsoft.CSharp.resources.dll",
+        "lib/sl5/ru/System.Xml.Linq.resources.dll",
+        "lib/sl5/zh-Hans/Microsoft.CSharp.resources.dll",
+        "lib/sl5/zh-Hans/System.Xml.Linq.resources.dll",
+        "lib/sl5/zh-Hant/Microsoft.CSharp.resources.dll",
+        "lib/sl5/zh-Hant/System.Xml.Linq.resources.dll",
+        "lib/uap10.0/FluentAssertions.Core.XML",
+        "lib/uap10.0/FluentAssertions.Core.dll",
+        "lib/uap10.0/FluentAssertions.Core.pdb",
+        "lib/uap10.0/FluentAssertions.dll",
+        "lib/uap10.0/FluentAssertions.pdb",
+        "lib/uap10.0/FluentAssertions.xml",
+        "lib/win81/FluentAssertions.Core.dll",
+        "lib/win81/FluentAssertions.Core.pdb",
+        "lib/win81/FluentAssertions.Core.xml",
+        "lib/win81/FluentAssertions.dll",
+        "lib/win81/FluentAssertions.pdb",
+        "lib/win81/FluentAssertions.pri",
+        "lib/win81/FluentAssertions.xml",
+        "lib/wp8/FluentAssertions.Core.dll",
+        "lib/wp8/FluentAssertions.Core.pdb",
+        "lib/wp8/FluentAssertions.Core.xml",
+        "lib/wp8/FluentAssertions.dll",
+        "lib/wp8/FluentAssertions.pdb",
+        "lib/wp8/FluentAssertions.xml",
+        "lib/wpa81/FluentAssertions.Core.dll",
+        "lib/wpa81/FluentAssertions.Core.pdb",
+        "lib/wpa81/FluentAssertions.Core.xml",
+        "lib/wpa81/FluentAssertions.dll",
+        "lib/wpa81/FluentAssertions.pdb",
+        "lib/wpa81/FluentAssertions.pri",
+        "lib/wpa81/FluentAssertions.xml"
       ]
     },
     "Libuv/1.9.1": {
@@ -5669,6 +5833,21 @@
         "mongodb.driver.core.nuspec"
       ]
     },
+    "Moq/4.7.99": {
+      "sha512": "nABMpxtxUb14VoPd0p0maxqjjbpHV/1MpvFiq1Kwb9NhHFC7V/1E40XYSOB2GeQ8tfz0/RyMn8SlDcmw0MB71w==",
+      "type": "package",
+      "path": "moq/4.7.99",
+      "files": [
+        "lib/net45/Moq.dll",
+        "lib/net45/Moq.pdb",
+        "lib/net45/Moq.xml",
+        "lib/netstandard1.3/Moq.dll",
+        "lib/netstandard1.3/Moq.pdb",
+        "lib/netstandard1.3/Moq.xml",
+        "moq.4.7.99.nupkg.sha512",
+        "moq.nuspec"
+      ]
+    },
     "NETStandard.Library/1.6.1": {
       "sha512": "WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
       "type": "package",
@@ -6892,10 +7071,10 @@
         "system.diagnostics.tools.nuspec"
       ]
     },
-    "System.Diagnostics.TraceSource/4.0.0": {
-      "sha512": "6WVCczFZKXwpWpzd/iJkYnsmWTSFFiU24Xx/YdHXBcu+nFI/ehTgeqdJQFbtRPzbrO3KtRNjvkhtj4t5/WwWsA==",
+    "System.Diagnostics.TraceSource/4.3.0": {
+      "sha512": "VnYp1NxGx8Ww731y2LJ1vpfb/DKVNKEZ8Jsh5SgQTZREL/YpWRArgh9pI8CDLmgHspZmLL697CaLvH85qQpRiw==",
       "type": "package",
-      "path": "system.diagnostics.tracesource/4.0.0",
+      "path": "system.diagnostics.tracesource/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -6927,7 +7106,7 @@
         "runtimes/unix/lib/netstandard1.3/System.Diagnostics.TraceSource.dll",
         "runtimes/win/lib/net46/System.Diagnostics.TraceSource.dll",
         "runtimes/win/lib/netstandard1.3/System.Diagnostics.TraceSource.dll",
-        "system.diagnostics.tracesource.4.0.0.nupkg.sha512",
+        "system.diagnostics.tracesource.4.3.0.nupkg.sha512",
         "system.diagnostics.tracesource.nuspec"
       ]
     },
@@ -10931,8 +11110,10 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
+      "FluentAssertions >= 4.19.3",
       "Microsoft.NET.Test.Sdk >= 15.0.0",
       "Microsoft.NETCore.App >= 1.1.2",
+      "Moq >= 4.7.99",
       "Tools.Api >= 1.0.0",
       "Tools.Core >= 1.0.0",
       "Tools.Infrastructure >= 1.0.0",
@@ -10977,9 +11158,17 @@
             "target": "Package",
             "version": "1.1.2"
           },
+          "FluentAssertions": {
+            "target": "Package",
+            "version": "4.19.3"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "15.0.0"
+          },
+          "Moq": {
+            "target": "Package",
+            "version": "4.7.99"
           },
           "xunit": {
             "target": "Package",
