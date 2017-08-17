@@ -7,22 +7,19 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Tools.Api.Framework;
+using Tools.Infrastructure.Database;
 using Tools.Infrastructure.IoC;
-using Tools.Infrastructure.IoC.Modules;
 
 namespace Tools.Api
 {
     public class Startup
     {
-        
         public IConfigurationRoot Configuration { get; }
-        
+
         //autofac
         public IContainer ApplicationContainer { get; private set; }
-        
-        
-        
+
+
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -38,12 +35,12 @@ namespace Tools.Api
         {
             // Add framework services.
             services.AddMvc() //json is printed in more readble form
-                .AddJsonOptions(x => x.SerializerSettings.Formatting = Formatting.Indented); 
-            
+                .AddJsonOptions(x => x.SerializerSettings.Formatting = Formatting.Indented);
+
             //autofac
             var builder = new ContainerBuilder();
             builder.Populate(services);
-            builder.RegisterModule(new ContainerModule());
+            builder.RegisterModule(new ContainerModule(Configuration));
             ApplicationContainer = builder.Build();
 
             return new AutofacServiceProvider(ApplicationContainer);
@@ -56,9 +53,11 @@ namespace Tools.Api
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseMiddleware(typeof(ExceptionHandlerMiddleware));
-            app.UseMvc();
+            //Mongo settings initalizer
+            MongoConfigurator._Init();
             
+            app.UseMvc();
+
             applicationLifetime.ApplicationStopped.Register(() => ApplicationContainer.Dispose());
         }
     }

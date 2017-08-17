@@ -10,7 +10,7 @@ namespace Tools.Infrastructure.Repositories
     /// <summary>
     /// Repository of tools in memory
     /// </summary>
-    public class ToolRepository : IToolRepository
+    public class LocalToolRepository : IToolRepository
     {
         private ISet<Tool> _tools = new HashSet<Tool>();
 

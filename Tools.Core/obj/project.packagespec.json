@@ -7,16 +7,16 @@
     "outputPath": "C:\\Users\\Karol\\Documents\\Programowanie\\C#\\Tools\\Tools.Core\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
-      "netstandard1.4"
+      "netstandard1.6"
     ],
     "frameworks": {
-      "netstandard1.4": {
+      "netstandard1.6": {
         "projectReferences": {}
       }
     }
   },
   "frameworks": {
-    "netstandard1.4": {
+    "netstandard1.6": {
       "dependencies": {
         "NETStandard.Library": {
           "target": "Package",

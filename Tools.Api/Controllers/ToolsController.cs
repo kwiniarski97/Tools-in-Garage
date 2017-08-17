@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Tools.Infrastructure.Commands;
+using Tools.Infrastructure.Commands.Tool;
 using Tools.Infrastructure.Services.Interfaces;
 
 namespace Tools.Api.Controllers
@@ -48,13 +49,24 @@ namespace Tools.Api.Controllers
         public async Task<IActionResult> Get(Guid id)
         {
             var tool = await _toolService.GetDetailsAsync(id);
-            if(tool == null)
+            if (tool == null)
             {
                 NoContent();
             }
             return Json(tool);
         }
-        
-        
+
+        [HttpPost("")]
+        public async Task<IActionResult> Post([FromBody] AddTool command)
+        {
+            await DispatchAsync(command);
+            return Created($"tools/{command.Id}", null);
+        }
+
+        [HttpPost("delete/{id}")]
+        public async Task Post([FromBody] DeleteTool command)
+        {
+            await DispatchAsync(command);
+        }
     }
 }

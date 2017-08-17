@@ -89,13 +89,6 @@ namespace Tools.Core.Domain
             {
                 return;
             }
-            //todo debug here
-            var typeEnum = Enum.GetName(typeof(ToolTypesEnum), type);
-
-            if (typeEnum == null)
-            {
-                throw new Exception($"Theres no tool of type: {type}");
-            }
             Type = type;
         }
     }
