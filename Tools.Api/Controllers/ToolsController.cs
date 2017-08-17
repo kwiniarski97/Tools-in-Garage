@@ -63,9 +63,10 @@ namespace Tools.Api.Controllers
         /// }
         /// </summary>
         [HttpPost("")]
-        public async Task Post([FromBody] AddTool command)
+        public async Task<IActionResult> Post([FromBody] AddTool command)
         {
             await DispatchAsync(command);
+            return Created($"tools/{command.Model}", null);
         }
 
         /// <summary>
