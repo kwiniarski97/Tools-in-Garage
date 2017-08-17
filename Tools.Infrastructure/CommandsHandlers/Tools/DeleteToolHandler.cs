@@ -5,6 +5,9 @@ using Transporter.Infrastructure.Commends;
 
 namespace Tools.Infrastructure.CommandsHandlers.Tools
 {
+    /// <summary>
+    /// delete a tool
+    /// </summary>
     public class DeleteToolHandler : ICommandHandler<DeleteTool>
     {
         private readonly IToolService _toolService;

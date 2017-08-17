@@ -14,6 +14,10 @@ namespace Tools.Infrastructure.IoC.Modules
             _configuration = configuration;
         }
 
+        /// <summary>
+        /// Adds Settings to IOC as singleton.
+        /// </summary>
+        /// <param name="builder"></param>
         protected override void Load(ContainerBuilder builder)
         {
             //singleton of settings

@@ -14,7 +14,4 @@
     <ProjectReference Include="..\Tools.Core\Tools.Core.csproj" />
     <ProjectReference Include="..\Tools.Infrastructure\Tools.Infrastructure.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="LocalRepos" />
-  </ItemGroup>
 </Project>

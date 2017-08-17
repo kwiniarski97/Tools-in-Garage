@@ -7,16 +7,48 @@ namespace Tools.Core.Repositories
 {
     public interface IToolRepository : IRepository
     {
-        Task<Tool> GetAsync(string model);
+        /// <summary>
+        /// Get general info about a specific model
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        Task<Tool> GetAsyncId(string model);
 
-        Task<Tool> GetAsync(Guid id);
+        /// <summary>
+        /// Get a tool from database using its Id.
+        /// Doesn't work because mongo db holds data in diffrent endian coding that .net 
+        /// Didn't have time to implement solution.
+        /// </summary>
+        /// <param name="id">Id of tool</param>
+        /// <returns>Tool of given id</returns>
+        Task<Tool> GetAsyncId(Guid id);
 
+        /// <summary>
+        /// Gets all tools
+        /// </summary>
+        /// <returns>IEnumerable of Tools</returns>
         Task<IEnumerable<Tool>> GetAllAsync();
 
+        /// <summary>
+        /// Add a tool
+        /// </summary>
+        /// <param name="tool">tool object</param>
         Task AddAsync(Tool tool);
 
+        /// <summary>
+        /// Delete tool
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         Task DeleteAsync(Guid id);
 
+        /// <summary>
+        /// Update tool
+        /// Doesn't work because mongo db holds data in diffrent endian coding that .net 
+        /// Didn't have time to implement solution.
+        /// </summary>
+        /// <param name="tool"></param>
+        /// <returns></returns>
         Task UpdateAsync(Tool tool);
     }
 }

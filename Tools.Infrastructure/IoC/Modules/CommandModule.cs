@@ -8,13 +8,16 @@ namespace Tools.Infrastructure.IoC.Modules
 {
     public class CommandModule : Module
     {
+        /// <summary>
+        /// Adds ICommandhandler implementations and ICommandDispatcher to ioc. 
+        /// </summary>
+        /// <param name="builder"></param>
         protected override void Load(ContainerBuilder builder)
         {
             var assembly = typeof(CommandModule)
                 .GetTypeInfo()
                 .Assembly;
 
-            //adds ICommandhandler implementations to ioc
             builder.RegisterAssemblyTypes(assembly)
                 .AsClosedTypesOf(typeof(ICommandHandler<>))
                 .InstancePerLifetimeScope();

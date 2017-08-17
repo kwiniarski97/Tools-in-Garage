@@ -1,0 +1,8 @@
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\bin\Release\netstandard1.6\Tools.Infrastructure.deps.json
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\bin\Release\netstandard1.6\Tools.Infrastructure.dll
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\bin\Release\netstandard1.6\Tools.Infrastructure.pdb
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\bin\Release\netstandard1.6\Tools.Core.dll
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\bin\Release\netstandard1.6\Tools.Core.pdb
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\obj\Release\netstandard1.6\Tools.Infrastructure.AssemblyInfo.cs
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\obj\Release\netstandard1.6\Tools.Infrastructure.dll
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Infrastructure\obj\Release\netstandard1.6\Tools.Infrastructure.pdb

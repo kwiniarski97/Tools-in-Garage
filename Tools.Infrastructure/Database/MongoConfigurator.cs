@@ -14,9 +14,9 @@ namespace Tools.Infrastructure.Database
             {
                 return;
             }
-            _initialized = true;
+            RegisterConvention();
         }
-        
+
         //23.12
 
         /// <summary>
@@ -24,22 +24,24 @@ namespace Tools.Infrastructure.Database
         /// </summary>
         private static void RegisterConvention()
         {
-            ConventionRegistry.Register("PassangerConventions",new MongoConvention(), x=>true );
+            ConventionRegistry.Register("PassangerConventions", new MongoConvention(), x => true);
+            _initialized = true;
         }
-        
+
+        /// <summary>
+        /// Ads a new conventios. 
+        /// 
+        /// Add here options
+        /// </summary>
         private class MongoConvention : IConventionPack
         {
             public IEnumerable<IConvention> Conventions => new List<IConvention>
             {
-                //ignore not serializable objecst
-                new IgnoreExtraElementsConvention(true),
-                // use camel case
+               // use camel case
                 new CamelCaseElementNameConvention(),
                 //enums holds as string
-                new EnumRepresentationConvention(BsonType.String),
-                
-                
-                };
+                new EnumRepresentationConvention(BsonType.String)
+            };
         }
     }
 }

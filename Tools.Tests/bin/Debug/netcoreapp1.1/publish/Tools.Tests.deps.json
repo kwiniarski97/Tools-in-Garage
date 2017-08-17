@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "173625e7548d90c451d871290d9243a81f2d60d3"
+    "signature": "d3b94d9f48c8b27d58cf8245336cb50b72a9df73"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,6 +9,7 @@
       "tools.tests/1.0.0": {
         "dependencies": {
           "FluentAssertions": "4.19.3",
+          "Microsoft.AspNetCore.TestHost": "1.1.2",
           "Microsoft.NET.Test.Sdk": "15.0.0",
           "Moq": "4.7.99",
           "Tools.Api": "1.0.0",
@@ -471,6 +472,15 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Server.Kestrel.dll": {}
+        }
+      },
+      "microsoft.aspnetcore.testhost/1.1.2": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting": "1.1.2",
+          "System.Diagnostics.Contracts": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.TestHost.dll": {}
         }
       },
       "microsoft.aspnetcore.webutilities/1.1.2": {
@@ -1533,6 +1543,13 @@
       "sha512": "sha512-n0ZSp+K0p1kth6FNsIRS8jWRs7CesTYr2u6apjcyWlFcG7lS3S8wvBIB1GkLQ6v/sygJ7cTHsvGqE59xWm2Szg==",
       "path": "microsoft.aspnetcore.server.kestrel/1.1.2",
       "hashPath": "microsoft.aspnetcore.server.kestrel.1.1.2.nupkg.sha512"
+    },
+    "microsoft.aspnetcore.testhost/1.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bHa5J73nUWg4b1KyUDpAPIlfl98fIXTT2WST8E+1Kxhy2bbxcaDrT3Kypia40ToqayWx8vtdkz5f7o5DV95X+Q==",
+      "path": "microsoft.aspnetcore.testhost/1.1.2",
+      "hashPath": "microsoft.aspnetcore.testhost.1.1.2.nupkg.sha512"
     },
     "microsoft.aspnetcore.webutilities/1.1.2": {
       "type": "package",

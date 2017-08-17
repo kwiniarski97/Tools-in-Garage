@@ -13,7 +13,10 @@ namespace Tools.Infrastructure.IoC
         {
             _configuration = configuration;
         }
-        
+        /// <summary>
+        /// Using autofac register modules to IoC. 
+        ///  </summary>
+        /// <param name="builder"></param>
         protected override void Load(ContainerBuilder builder)
         {
             //adds automapper as singleton

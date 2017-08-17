@@ -27,7 +27,7 @@ namespace Tools.Infrastructure.Services.Implementations
         /// <returns>Tool as an ToolDTO object</returns>
         public async Task<ToolDto> GetAsync(string model)
         {
-            var tool = await _toolRepository.GetAsync(model);
+            var tool = await _toolRepository.GetAsyncId(model);
             return _mapper.Map<ToolDto>(tool);
         }
 
@@ -44,7 +44,7 @@ namespace Tools.Infrastructure.Services.Implementations
         
         public async Task AddAsync(Guid id, string model, string brand, string type, uint box)
         {
-            var tool = await _toolRepository.GetAsync(id);
+            var tool = await _toolRepository.GetAsyncId(id);
             if (tool != null)
             {
                 throw new Exception($"Tool with id {id} already exists.");

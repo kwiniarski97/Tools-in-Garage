@@ -6,6 +6,9 @@ using Transporter.Infrastructure.Commends;
 
 namespace Tools.Infrastructure.CommandsHandlers.Tools
 {
+    /// <summary>
+    /// update a tool
+    /// </summary>
     public class UpdateToolHandler : ICommandHandler<UpdateTool>
     {
         private readonly IToolService _toolService;

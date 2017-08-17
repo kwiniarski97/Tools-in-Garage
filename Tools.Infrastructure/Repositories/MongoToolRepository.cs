@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
 using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;
@@ -17,12 +18,11 @@ namespace Tools.Infrastructure.Repositories
             _database = database;
         }
 
-        public async Task<Tool> GetAsync(string model) =>
+        public async Task<Tool> GetAsyncId(string model) =>
             await Tools.AsQueryable().FirstOrDefaultAsync(tool => tool.Model == model);
 
 
-        public async Task<Tool> GetAsync(Guid id) =>
-            await Tools.AsQueryable().FirstOrDefaultAsync(tool => tool.Id == id);
+        
 
         public async Task<IEnumerable<Tool>> GetAllAsync() =>
             await Tools.AsQueryable().ToListAsync();
@@ -32,21 +32,20 @@ namespace Tools.Infrastructure.Repositories
 
         public async Task DeleteAsync(Guid id)
         {
-            var tool = await GetAsync(id);
-            //had to do it this way cause short on time
-            await Tools.DeleteOneAsync( x => x.Box == tool.Box && x.Brand == tool.Brand 
-                                                && x.Model == tool.Model);
+            var tool = await GetAsyncId(id);
+            //doesn't work
+            await Tools.DeleteOneAsync(x => x.Box == tool.Box && x.Brand == tool.Brand
+                                            && x.Model == tool.Model);
         }
 
         public async Task UpdateAsync(Tool tool)
         {
-            var toolOriginal = await GetAsync(tool.Id);
-            
-            await Tools.ReplaceOneAsync(x => x.Box == toolOriginal.Box && x.Brand == toolOriginal.Brand 
-                                             && x.Model == toolOriginal.Model, tool);
+            //doesn't work 
+            await Tools.AsQueryable().FirstAsync(x => x.Id == tool.Id);
         }
-            
 
+        public async Task<Tool> GetAsyncId(Guid id) =>
+            await Tools.AsQueryable().FirstOrDefaultAsync(tool => tool.Id == id);
 
         private IMongoCollection<Tool> Tools => _database.GetCollection<Tool>("Tools");
     }

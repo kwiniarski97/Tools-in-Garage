@@ -23,14 +23,14 @@ namespace Tools.Tests.Services
         }
 
         [Fact]
-        public async Task calling_getasync_should_get_user_and_be_invoked_just_once()
+        public async Task calling_getasync_should_get_tool_and_be_invoked_just_once()
         {
             var toolRepositoryMock = new Mock<IToolRepository>();
             var toolService = GetToolService(toolRepositoryMock);
 
             await toolService.GetAsync("string model");
 
-            toolRepositoryMock.Verify(x => x.GetAsync(It.IsAny<string>()), Times.Once);
+            toolRepositoryMock.Verify(x => x.GetAsyncId(It.IsAny<string>()), Times.Once);
         }
 
         [Fact]

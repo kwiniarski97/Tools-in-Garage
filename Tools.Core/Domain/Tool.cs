@@ -30,11 +30,12 @@ namespace Tools.Core.Domain
             SetModel(model);
             SetBrand(brand);
             SetType(type);
-            //todo mozesz dodaj jakas maksymalna liczbe szafek czy inne
             Box = box;
         }
 
-        //added because of conventions
+        /// <summary>
+        /// Added because of conventions
+        /// </summary>
         protected Tool()
         {
         }
@@ -45,7 +46,6 @@ namespace Tools.Core.Domain
         /// </summary>
         /// <param name="model">Name of tool</param>
         /// <exception cref="Exception"></exception>
-        //TODO moze dodaj jakas walidacje 
         private void SetModel(string model)
         {
             if (string.IsNullOrWhiteSpace(model))
@@ -79,6 +79,11 @@ namespace Tools.Core.Domain
             Brand = brand;
         }
 
+        /// <summary>
+        /// Set type
+        /// </summary>
+        /// <param name="type">type to add</param>
+        /// <exception cref="Exception"></exception>
         private void SetType(string type)
         {
             if (string.IsNullOrWhiteSpace(type))
