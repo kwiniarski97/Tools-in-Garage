@@ -18,9 +18,9 @@ Tworząc tą aplikację trzymałem się takich konwencji i wzorców jak:
 ###	Uruchamianie
 
 * Aplikacja do uruchomienia wymaga bazy danych MongoDB uruchomionej na domyślnym porcie z domyślym użytkownikiem.
-[Wiki](https://docs.mongodb.com/manual/installation/), oraz [.Netcore](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) w wersji 1.1 .
+[Wiki](https://docs.mongodb.com/manual/installation/), oraz [.NET core](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) w wersji 1.1 .
 
-* Pobrana i wypakowana [aplikację](https://drive.google.com/open?id=0B3fm0ZCW9xYJTlVlSW9HOGN4X2M) uruchamiamy z poziomu cmd lub terminala komendą ```dotnet tools.api.dll```
+* Pobraną i wypakowana [aplikację](https://drive.google.com/open?id=0B3fm0ZCW9xYJTlVlSW9HOGN4X2M) uruchamiamy z poziomu cmd lub terminala komendą ```dotnet tools.api.dll```
 
 * Aplikacja powinna być teraz uruchomiona i działać na porcie 5000. 
  
