@@ -1894,12 +1894,6 @@
         "framework": ".NETStandard,Version=v1.6",
         "dependencies": {
           "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "bin/placeholder/Tools.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Tools.Core.dll": {}
         }
       }
     }
@@ -6225,13 +6219,14 @@
     "frameworks": {
       "netstandard1.6": {
         "dependencies": {
+          "MongoDB.Driver": {
+            "target": "Package",
+            "version": "2.4.4"
+          },
           "NETStandard.Library": {
             "target": "Package",
-            "version": "1.6.1"
-          },
-          "Autofac": {
-            "target": "Package",
-            "version": "4.6.1"
+            "version": "1.6.1",
+            "autoReferenced": true
           },
           "AutoMapper": {
             "target": "Package",
@@ -6241,9 +6236,9 @@
             "target": "Package",
             "version": "1.1.2"
           },
-          "MongoDB.Driver": {
+          "Autofac": {
             "target": "Package",
-            "version": "2.4.4"
+            "version": "4.6.1"
           },
           "Newtonsoft.Json": {
             "target": "Package",

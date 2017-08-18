@@ -7,6 +7,7 @@ C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\bin\Release\netcoreapp
 C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\bin\Release\netcoreapp1.1\Tools.Infrastructure.dll
 C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\bin\Release\netcoreapp1.1\Tools.Infrastructure.pdb
 C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\bin\Release\netcoreapp1.1\Tools.Core.pdb
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\obj\Release\netcoreapp1.1\Tools.Api.csprojResolveAssemblyReference.cache
 C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\obj\Release\netcoreapp1.1\Tools.Api.AssemblyInfo.cs
 C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\obj\Release\netcoreapp1.1\Tools.Api.dll
 C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Api\obj\Release\netcoreapp1.1\Tools.Api.pdb

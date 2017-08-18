@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 using System.Threading.Tasks;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;
 using Tools.Core.Domain;
@@ -21,9 +22,6 @@ namespace Tools.Infrastructure.Repositories
         public async Task<Tool> GetAsyncId(string model) =>
             await Tools.AsQueryable().FirstOrDefaultAsync(tool => tool.Model == model);
 
-
-        
-
         public async Task<IEnumerable<Tool>> GetAllAsync() =>
             await Tools.AsQueryable().ToListAsync();
 
@@ -32,21 +30,17 @@ namespace Tools.Infrastructure.Repositories
 
         public async Task DeleteAsync(Guid id)
         {
-            var tool = await GetAsyncId(id);
-            //doesn't work
-            await Tools.DeleteOneAsync(x => x.Box == tool.Box && x.Brand == tool.Brand
-                                            && x.Model == tool.Model);
+            await Tools.DeleteOneAsync(x => x.Id == new Guid(id.ToString()));
         }
 
         public async Task UpdateAsync(Tool tool)
         {
-            //doesn't work 
-            await Tools.AsQueryable().FirstAsync(x => x.Id == tool.Id);
+            await Tools.ReplaceOneAsync(x => x.Id == new Guid(tool.Id.ToString()),tool);
         }
 
         public async Task<Tool> GetAsyncId(Guid id) =>
-            await Tools.AsQueryable().FirstOrDefaultAsync(tool => tool.Id == id);
+            await Tools.AsQueryable().FirstOrDefaultAsync(tool => tool.Id == new Guid(id.ToString()));
 
         private IMongoCollection<Tool> Tools => _database.GetCollection<Tool>("Tools");
-    }
+        }
 }

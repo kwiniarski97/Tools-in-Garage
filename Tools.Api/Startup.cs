@@ -55,7 +55,7 @@ namespace Tools.Api
 
             //Mongo settings initalizer
             MongoConfigurator._Init();
-            
+
             app.UseMvc();
 
             applicationLifetime.ApplicationStopped.Register(() => ApplicationContainer.Dispose());

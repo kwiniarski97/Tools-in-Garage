@@ -4352,7 +4352,8 @@
         "dependencies": {
           "NETStandard.Library": {
             "target": "Package",
-            "version": "1.6.1"
+            "version": "1.6.1",
+            "autoReferenced": true
           }
         }
       }

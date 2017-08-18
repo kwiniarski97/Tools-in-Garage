@@ -16,8 +16,6 @@ namespace Tools.Core.Repositories
 
         /// <summary>
         /// Get a tool from database using its Id.
-        /// Doesn't work because mongo db holds data in diffrent endian coding that .net 
-        /// Didn't have time to implement solution.
         /// </summary>
         /// <param name="id">Id of tool</param>
         /// <returns>Tool of given id</returns>
@@ -44,8 +42,6 @@ namespace Tools.Core.Repositories
 
         /// <summary>
         /// Update tool
-        /// Doesn't work because mongo db holds data in diffrent endian coding that .net 
-        /// Didn't have time to implement solution.
         /// </summary>
         /// <param name="tool"></param>
         /// <returns></returns>

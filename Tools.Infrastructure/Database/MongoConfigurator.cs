@@ -24,6 +24,7 @@ namespace Tools.Infrastructure.Database
         /// </summary>
         private static void RegisterConvention()
         {
+            BsonDefaults.GuidRepresentation = GuidRepresentation.PythonLegacy;
             ConventionRegistry.Register("PassangerConventions", new MongoConvention(), x => true);
             _initialized = true;
         }

@@ -4,3 +4,4 @@ C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Core\bin\Release\netstanda
 C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Core\obj\Release\netstandard1.6\Tools.Core.AssemblyInfo.cs
 C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Core\obj\Release\netstandard1.6\Tools.Core.dll
 C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Core\obj\Release\netstandard1.6\Tools.Core.pdb
+C:\Users\Karol\Documents\Programowanie\C#\Tools\Tools.Core\obj\Release\netstandard1.6\Tools.Core.csprojResolveAssemblyReference.cache
