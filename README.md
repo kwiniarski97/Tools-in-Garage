@@ -1,6 +1,4 @@
  
-# Projekt stworzony w celach rekrutacyjnych
-
 Tworząc ten projekt miałem w zamyśle stworzyć coś dzięki czemu całkowicie niezależny będzie od siebie backend i frontend. 
 Chciałem także żeby aplikacja była jak najbardziej skalowalna.
 Tworząc tą aplikację trzymałem się takich konwencji i wzorców jak:
@@ -30,7 +28,6 @@ Tworząc tą aplikację trzymałem się takich konwencji i wzorców jak:
 ##
 ### Korzystanie
 
-``Niestety z braku czasu i zasobów nie byłem w stanie wdrożyć  rozwiązania jak i stworzyć front endu aplikacji.``
 
 * GET ``http://localhost:5000/tools`` - Zwraca listę narzędzi jako object JSON
 * POST ``http://localhost:5000/tools`` - Tworzy nowe narzędzie w bazie; JSON przekazany powinnien mieć formę ``[ 
